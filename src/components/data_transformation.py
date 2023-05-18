@@ -91,8 +91,6 @@ class DataTransformation:
 
             save_obj(self.data_transformation_config.preprocessor_path,preprocessor_obj)
 
-            logging.info("Saved preprocessing object")
-
             return (
                 train_arr,
                 test_arr,

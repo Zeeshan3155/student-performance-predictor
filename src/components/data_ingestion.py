@@ -7,7 +7,7 @@ from sklearn.model_selection import train_test_split
 from dataclasses import dataclass
 
 from src.components.data_transformation import DataTransforamtionConfig, DataTransformation
-
+from src.components.model_trainer import ModelTrainer
 @dataclass
 class DataIngestionConfig:
     train_data_path :str = os.path.join('artifacts','train.csv')
@@ -52,6 +52,8 @@ if __name__=='__main__':
     transformer = DataTransformation()
     train_arr, test_arr,path = transformer.initiate_transformer(train_data,test_data)
 
-
+    trainer = ModelTrainer()
+    score = trainer.initiate_trainer(train_arr,test_arr)
+    print(score)
 
         
