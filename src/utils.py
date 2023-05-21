@@ -63,3 +63,10 @@ def tune_models(X_train,y_train,X_test,y_test,models,params):
     
     except Exception as e:
         raise CustomException(e,sys)
+
+def load_object(object_path):
+    try:
+        with open(object_path,"rb") as fp:
+            return pickle.load(fp)
+    except Exception as e:
+        raise CustomException(e,sys)
