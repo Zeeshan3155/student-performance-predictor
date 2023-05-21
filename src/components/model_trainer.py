@@ -4,8 +4,6 @@ from sklearn.linear_model import LinearRegression
 from catboost import CatBoostRegressor
 from xgboost import XGBRegressor
 from sklearn.ensemble import AdaBoostRegressor, GradientBoostingRegressor, RandomForestRegressor
-from sklearn.neighbors import KNeighborsRegressor
-from sklearn.metrics import r2_score
 from dataclasses import dataclass
 
 from src.logger import logging
